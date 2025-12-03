@@ -4,6 +4,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 echo "Build the Docker Image"
+                bat "docker login -u samrithi -p Pranavi@123"
                 bat "docker build -t mywebapp ."
             }
         }
